@@ -6,5 +6,56 @@
 }
 /* save color or other attributes */
 :root {
+    --bg: grey;
+}
 
+#mainPage {
+    background: var(--bg);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 100%;
+}
+
+.tLCircle {
+    height: 600px;
+    width: 600px;
+    background: radial-gradient(circle at 100px 100px, #ff0000, #000);
+    top: -250px;
+    left: -250px;
+}
+
+.brCircle {
+    height: 400px;
+    width: 400px;
+    background: radial-gradient(circle at 100px 100px, #5cabff, #000);
+    bottom: -200px;
+    right: -200px;
+    z-index: 2;
+}
+
+.glassCard {
+    position: absolute;
+    width: 80vw;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(31 73 86 / 25%);
+    box-shadow: 0 8px 32px 0 rgb(80 82 101 / 37%);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+}
+
+.glassCard h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin: 10px 0;
+    color: white;
 }

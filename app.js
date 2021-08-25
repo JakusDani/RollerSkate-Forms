@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/', (req, res) => {
+  mailOptions.text = `${req.body.inputName}, ${req.body.inputEmail}, ${req.body.lessons}, ${req.body.fav_language}, ${req.body.vehicle1}, ${req.body.vehicle2}, ${req.body.vehicle3}`
     transporter.sendMail(mailOptions, function(error, info){
         if (error) {
           console.log(error);
